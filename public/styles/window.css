@@ -1,0 +1,91 @@
+.window {
+    background-color: var(--color-black-opacity);
+    backdrop-filter: blur(5px);
+    width: 600px;
+    height: 400px;
+    margin: calc(100vh / 10) auto 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px var(--color-black);
+}
+
+.window .title-bar {
+    width: calc(100% - 20px);
+    height: 30px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 1px 1px var(--color-black);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    cursor: grab;
+}
+
+.window .title-bar .action-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.window .title-bar .close-button {
+    background-color: var(--color-red);
+}
+
+.window .title-bar .minimize-button {
+    background-color: var(--color-yellow);
+}
+
+.window .title-bar .maximize-button {
+    background-color: var(--color-green);
+}
+
+.window .title-bar span {
+    font-size: 12px;
+}
+
+.window .content {
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+}
+
+.window .content > div {
+    padding: 20px;
+}
+
+.window .content .sidebar {
+    flex: 1;
+}
+
+.window .content .main {
+    flex: 2;
+    background-color: var(--color-black-opacity);
+    border-bottom-right-radius: 10px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.window .content h1,
+.window .content p {
+    color: var(--color-white);
+}
+
+.window .content .main div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.window .content .main div img {
+    margin-left: 10px;
+    height: 14px;
+}
+
+.window .content .main div.completed {
+    text-decoration: line-through;
+    text-decoration-color: var(--color-white);
+}
